@@ -14,7 +14,7 @@ Now that you have the file, right-click on the `Balloons.playground` file and se
 
 ![Playground Package Contents](playgroundPackageContents.png)
 
-Notice that you have three types of files, and two directions.  For files, you have: 1) `contents.xcplayground`, 2) a number of .swift files, and 3) a `timeline.xctimeline`.  The first is a sort of manifest file that tells the `Playground` how to display and organize its content; I will discuss this file in greater detail in the next section.  The second set of file types contain the actual Swift code that is executed in the `Playground`.  Last, the third sort of file describes the timeline feature displayed in the Assistant Editor.
+Notice that you have three types of files, and two directions.  For files, you have: 1) `contents.xcplayground`, 2) a number of `.swift` files, and 3) a `timeline.xctimeline`.  The first is a sort of manifest file that tells the `Playground` how to display and organize its content; I will discuss this file in greater detail in the next section.  The second set of file types contain the actual Swift code that is executed in the `Playground`.  Last, the third sort of file describes the timeline feature displayed in the Assistant Editor.
 
 For directories, the `Balloons.playground` file has "Documentation" and "Resources".  Clicking on this first folder reveals that it contains a number of `.html` files and one `.css` file.  The lesson to be learned here is that the "Documentation" folder holds all of the textual content of the `Playground` described as a series of web pages.  The CSS file defines the `Playground's` styling of these pages.  Finally, the "Resources" folder contains all of the external assets that the `Playground` uses to render the game's content.
 
