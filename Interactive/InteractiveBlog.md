@@ -12,5 +12,5 @@ Let's begin by downloading Apple's `Balloons.playground`.  Go ahead and click on
 
 Now that you have the file, right-click on the `Balloons.playground` file and select "Show Package Contents".  Doing so will reveal a number of files.  Interestingly, what appeared to be a single file is actually made up of several others.  It is this hidden organization that drives some of the subtle power delivered by a `Playground`.  You should see something like the image below.
 
-![Playground Package Contents](/playgroundPackageContents.png)
+![Playground Package Contents](playgroundPackageContents.png)
 
