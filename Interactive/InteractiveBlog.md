@@ -131,3 +131,5 @@ Make sure that you have saved all of your CSS and HTML files and that they are i
 `Playgrounds` are among the most exciting new tools for the Mac and iOS developer.  They are a great resource for rapidly testing and developing solutions to a problem.  This idea is obvious at first glance.  
 
 `Playgrounds` also offer some pedagogical benefits as well, as this post aims to show.  Done well, a `Playground` can be a presentation tool with a full Swift REPL inside of it.  It is also feasible that entire lessons can be mapped out in a single, or collection of, `Playgrounds`.  Each section of the `Playground` could describe a new concept or pattern, and then be followed by a section for writing Swift code.  The elegance of this approach lies in the fact that a `Playground` can do both things at the same time.
+
+Finally, it is worth mentioning that there is more to explore in `Playgrounds`.  For example, I didn't cover using assets into the `Resources` folder.  `Playgrounds` even have an API that you can explore.  Type in `import XCPlayground` at the top of a `Playground` and command-click on `XCPlayground` to see what is available.
