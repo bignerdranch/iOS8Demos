@@ -28,4 +28,28 @@ Create a new `Playground` called `Interactive.playground`.  Save this file where
 
 ![Contents](contentsPlayground.png)
 
-As you can see, 
+As you can see, this is an XML file that acts as a manifest for the `Playground`: it describes the organization of the `Playgrounds`'s content.  You will put your content inside the `sections` tag.  Notice the `code` tag?  This tag links to a file in the `Playground` that contains your Swift code.  If you open the `section-1.swift` file, you should see the standard `Playground` boilerplate code:
+
+```
+import UIKit
+
+var str = "Hello, playground"
+```
+
+Delete the contents of this file, and replace it with the following:
+
+```
+let myName = "Matt Mathias"
+// try to change myName; what happens?
+
+var myAge = 32
+// try to change myAge; what happens?
+```
+
+If you open the `Playground`, then you should see that the code has changed.
+
+####Adding Documentation
+
+Recall that `Balloons.playground` had a directory called `Documentation`.  The directory contained a number of `.html` files, and each of these files were linked against in the XML inside the `contents.xcplayground` file.  Copy that organization by creating a new folder inside `Interactive.playground` called `Documentation`.
+
+Now, switch to this folder and add a new file called `section0.html`.  Open this file, and add the following HTML to it.s
