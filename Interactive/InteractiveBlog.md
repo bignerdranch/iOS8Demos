@@ -20,5 +20,10 @@ For directories, the `Balloons.playground` file has "Documentation" and "Resourc
 
 Now that you have seen the hidden secrets of the Swift `Playground`, let's make our own interactive document!
 
-##An Interactive Presentation
+###An Interactive Presentation
 
+As mentioned above, imagine that you are teaching a class on Swift.  You would like to make a presentation on constants and variables, and would prefer that your presentation takes advantage of the Swift REPL.  Good news!  You can make your presentation right inside of Swift.
+
+Create a new `Playground` called `Interactive.playground`.  Save this file where you like.  Next, right-click on `Interactive.playground` and select "Show Package Contents".  You will see two files of note: 1) `contents.xcplayground`, and 2) `section-1.swift`.  Go ahead and open `contents.xcplayground` in your text editor of choice.  You should see something similar to the image below.
+
+![Playground Package Contents](contentsPlayground.png)

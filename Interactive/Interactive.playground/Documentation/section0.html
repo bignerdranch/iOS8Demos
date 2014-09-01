@@ -1,29 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>  
-        <title>TITLE</title>
-        <link rel="stylesheet" type="text/css" href="style-1.1.15.css" />
-        <meta charset='utf-8'> 
-        <meta id="xcode-display" name="xcode-display" content="render" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name = "viewport" content = "width = device-width, maximum-scale=1.0">
-    </head>
-    <body id="conceptual_flow_with_tasks" class="jazz">
-		<div class="content-wrapper">
-			<article class="chapter>">
-				<section class="section">
-					<h1 class="section-name" tabindex="0">Constants and Variables</h1>
-					<p class="para">
-						Swift is more explicit about mutability during the declaration of an instance of a type.  When you want a constant, you must use <code>let</code>.  Use <code>let</code> when you don't want an instance's value to change.  If you would like a variable, you must use <code>var</code>.  <code>var</code> is used when you know that an instance will change in some way.
-					</p>
-					<p class="para">
-						Notice that this means that getting an immutable or mutable instance is more of a conscious decision.  You decide what you want right when you get an instance.  In Swift, mutability is no longer an artifact of which class you use.  Thus, more careful thought is required.  
-					</p>
-					<p class="para">
-						It is our suggestion that you initially opt for a constant, an immutable instance.  Your application will be easier to maintain, read, and develop for if it is very clear what values can change, and what values cannot.  
-					</p>
-				</section>
-			</article>
-		</div>
+    <head>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+    <body>
+		<h1>Constants and Variables</h1>
+		<p>
+			Swift is more explicit about the mutability of an instance than Objective-C.  While ObjC's mutability is determined by the class the developer uses, Swift requires that mutability be declared when an instance of a type is created.  
+		</p>
+		<p>
+			When you want a constant, you must use <code>let</code>.  Use <code>let</code> when you don't want an instance's value to change.  If you would like a variable, you must use <code>var</code>.  <code>var</code> is used when you know that an instance will change at some point.
+		</p>
+		<p>
+			Notice that this means that mutability is more of a conscious decision.  You decide what you want right when you make an instance.  In Swift, mutability is no longer an artifact of which class you use.  Thus, more careful thought is required.  
+		</p>
+		<p>
+			It is our suggestion that you initially opt for a constant, an immutable instance.  Your application will be easier to maintain, read, and develop for if it is very clear what values can change, and what values cannot.  
+		</p>
     </body>
 </html>
