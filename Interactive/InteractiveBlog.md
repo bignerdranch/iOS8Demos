@@ -52,4 +52,55 @@ If you open the `Playground`, then you should see that the code has changed.
 
 Recall that `Balloons.playground` had a directory called `Documentation`.  The directory contained a number of `.html` files, and each of these files were linked against in the XML inside the `contents.xcplayground` file.  Copy that organization by creating a new folder inside `Interactive.playground` called `Documentation`.
 
-Now, switch to this folder and add a new file called `section0.html`.  Open this file, and add the following HTML to it.s
+It is worth mentioning that each section of content in the `Documentation` directory describes a distinct web page, which is displayed in the `Playground` as a web view.  There is a lot of power and creativity that you can take advantage of here.
+
+Now, switch to the `Documentation` folder and add a new file called `section0.html`.  Open this file, and add the following HTML to it.
+
+```
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+    <body>
+		<h1>Constants and Variables</h1>
+		<p>
+			Swift is more explicit about the mutability of an instance than Objective-C.  While ObjC's mutability is determined by the class the developer uses, Swift requires that mutability be declared when an instance of a type is created.  
+		</p>
+		<p>
+			When you want a constant, you must use <code>let</code>.  Use <code>let</code> when you don't want an instance's value to change.  If you would like a variable, you must use <code>var</code>.  <code>var</code> is used when you know that an instance will change at some point.
+		</p>
+		<p>
+			Notice that this means that mutability is more of a conscious decision.  You decide what you want right when you make an instance.  In Swift, mutability is no longer an artifact of which class you use.  Thus, more careful thought is required.  
+		</p>
+		<p>
+			It is our suggestion that you initially opt for a constant, an immutable instance.  Your application will be easier to maintain, read, and develop for if it is very clear what values can change, and what values cannot.  
+		</p>
+    </body>
+</html>
+```
+
+This HTML code is fairly simple.  `section0.html` gives a simple description of the role and use of constants and variables in Swift.
+
+####Formatting Documentation with CSS
+
+`section0.html` links to a CSS file called `styl.css`.  This CSS file works just the same way thaty you would imagine: it defines the styling of the HTML pages in your `Documentation` directory.  Go ahead and create a new file called `style.css` and add it to your `Documentation` directory.  Open this file and add the code below.
+
+```
+body {
+	background-color: #d0e4fe; 
+    margin: 10px 25px;
+	padding-bottom: 20px;
+}
+h1 {
+    color: gray;
+    text-align: left;
+	font-size: 22px;
+}
+p {
+    font-family: "Helvetica";
+    font-size: 18px;
+}
+```
+
+This CSS file does not really do anything fancy.  It is just a simple description of your HTML page's style in terms of margins, colors, fonts, and text alignment.
