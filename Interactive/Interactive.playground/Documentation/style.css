@@ -1,0 +1,14 @@
+body {
+	background-color: #d0e4fe; 
+    margin: 10px 25px;
+	padding-bottom: 20px;
+}
+h1 {
+    color: gray;
+    text-align: left;
+	font-size: 22px;
+}
+p {
+    font-family: "Helvetica";
+    font-size: 18px;
+}

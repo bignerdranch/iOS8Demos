@@ -26,4 +26,6 @@ As mentioned above, imagine that you are teaching a class on Swift.  You would l
 
 Create a new `Playground` called `Interactive.playground`.  Save this file where you like.  Next, right-click on `Interactive.playground` and select "Show Package Contents".  You will see two files of note: 1) `contents.xcplayground`, and 2) `section-1.swift`.  Go ahead and open `contents.xcplayground` in your text editor of choice.  You should see something similar to the image below.
 
-![Playground Package Contents](contentsPlayground.png)
+![Contents](contentsPlayground.png)
+
+As you can see, 
