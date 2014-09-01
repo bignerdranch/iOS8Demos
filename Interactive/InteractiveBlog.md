@@ -18,7 +18,7 @@ Notice that you have three types of files, and two directions.  For files, you h
 
 For directories, the `Balloons.playground` file has "Documentation" and "Resources".  Clicking on this first folder reveals that it contains a number of `.html` files and one `.css` file.  The lesson to be learned here is that the "Documentation" folder holds all of the textual content of the `Playground` described as a series of web pages.  The CSS file defines the `Playground's` styling of these pages.  Finally, the "Resources" folder contains all of the external assets that the `Playground` uses to render the game's content.
 
-Now that you have seen the hidden secrets of the Swift `Playground`, let's make our own interactive document!
+Now that you have seen the hidden secrets of the Swift `Playground`, let's make our own interactive document.
 
 ###An Interactive Presentation
 
@@ -103,4 +103,31 @@ p {
 }
 ```
 
-This CSS file does not really do anything fancy.  It is just a simple description of your HTML page's style in terms of margins, colors, fonts, and text alignment.
+This CSS file does not really do anything fancy.  It is just a simple description of your HTML page's style in terms of margins, colors, fonts, and text alignment.  If you prefer more or less styling, then have it.
+
+####Mapping the Content
+
+The last step entails teaching the `Playground` how to organize its content.  You will use the `contents.xcplayground` file to complete this task.  Open this file in a text editor and have it match the code below.
+
+```
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='3.0' sdk='iphonesimulator'>
+    <sections>
+        <documentation relative-path='section0.html'/>
+        <code source-file-name='section-1.swift'/>
+    </sections>
+    <timeline fileName='timeline.xctimeline'/>
+</playground>
+```
+
+The XML inside this file remained largely the same.  The only difference is that you have added a tag called `documentation`.  As you can probably guess, the role of this tag is to specify the location of a `.html` file for the `Playground`.  This HTML file describes the web page content for the first section of the `Playground`.  Finally, the order of the elements within the `sections` tag determines the order in which they will appear in the `Playground`.  
+
+Make sure that you have saved all of your CSS and HTML files and that they are in the appropriate folders.  If Xcode is open, go ahead and close it.  Reopen Xcode, select `Interactive.playground` and you should see something like the image below.
+
+![An Interactive Document](interactivePlaygroundDocument.png)
+
+##Conclusion
+
+`Playgrounds` are among the most exciting new tools for the Mac and iOS developer.  They are a great resource for rapidly testing and developing solutions to a problem.  This idea is obvious at first glance.  
+
+`Playgrounds` also offer some pedagogical benefits as well, as this post aims to show.  Done well, a `Playground` can be a presentation tool with a full Swift REPL inside of it.  It is also feasible that entire lessons can be mapped out in a single, or collection of, `Playgrounds`.  Each section of the `Playground` could describe a new concept or pattern, and then be followed by a section for writing Swift code.  The elegance of this approach lies in the fact that a `Playground` can do both things at the same time.
