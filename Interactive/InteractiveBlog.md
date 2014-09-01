@@ -39,10 +39,10 @@ var str = "Hello, playground"
 Delete the contents of this file, and replace it with the following:
 
 ```
-let myName = "Matt Mathias"
+let myName = "YOUR NAME HERE"
 // try to change myName; what happens?
 
-var myAge = 32
+var myAge = // your age here
 // try to change myAge; what happens?
 ```
 
