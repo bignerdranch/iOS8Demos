@@ -14,9 +14,9 @@ Now that you have the file, right-click on the `Balloons.playground` file and se
 
 ![Playground Package Contents](playgroundPackageContents.png)
 
-Notice that you have three types of files, and two directions.  For files, you have: 1) `contents.xcplayground`, 2) a number of `.swift` files, and 3) a `timeline.xctimeline`.  The first is a sort of manifest file that tells the `Playground` how to display and organize its content; I will discuss this file in greater detail in the next section.  The second set of file types contain the actual Swift code that is executed in the `Playground`.  Last, the third sort of file describes the timeline feature displayed in the Assistant Editor.
+Notice that you have three types of files, and two directories.  For files, you have: 1) `contents.xcplayground`, 2) a number of `.swift` files, and 3) a `timeline.xctimeline`.  The first is a sort of manifest file that tells the `Playground` how to display and organize its content; I will discuss this file in greater detail in the next section.  The second set of file types contains the actual Swift code that is executed in the `Playground`.  Third, the `timeline.xctimeline` file describes the timeline feature displayed in the Assistant Editor.
 
-For directories, the `Balloons.playground` file has "Documentation" and "Resources".  Clicking on this first folder reveals that it contains a number of `.html` files and one `.css` file.  The lesson to be learned here is that the "Documentation" folder holds all of the textual content of the `Playground` described as a series of web pages.  The CSS file defines the `Playground's` styling of these pages.  Finally, the "Resources" folder contains all of the external assets that the `Playground` uses to render the game's content.
+For directories, the `Balloons.playground` file has "Documentation" and "Resources".  Clicking on this first folder reveals that it contains a number of `.html` files and one `.css` file.  The "Documentation" folder holds all of the textual content of the `Playground` described as a series of web pages.  The CSS file defines the `Playground's` styling of these pages.  Finally, the "Resources" folder contains all of the external assets that the `Playground` uses to render the game's content.
 
 Now that you have seen the hidden secrets of the Swift `Playground`, let's make our own interactive document.
 
@@ -52,9 +52,9 @@ If you open the `Playground`, then you should see that the code has changed.
 
 Recall that `Balloons.playground` had a directory called `Documentation`.  The directory contained a number of `.html` files, and each of these files were linked against in the XML inside the `contents.xcplayground` file.  Copy that organization by creating a new folder inside `Interactive.playground` called `Documentation`.
 
-It is worth mentioning that each section of content in the `Documentation` directory describes a distinct web page, which is displayed in the `Playground` as a web view.  There is a lot of power and creativity that you can take advantage of here.
+It is worth mentioning that each section of content in the `Documentation` directory describes a distinct web page, which is displayed in the `Playground` as a web view.  There is a lot of room for creativity here.
 
-Now, switch to the `Documentation` folder and add a new file called `section0.html`.  Open this file, and add the following HTML to it.
+Switch to the `Documentation` folder and add a new file called `section0.html`.  Open this file, and copy and paste the following HTML to it.
 
 ```
 <!DOCTYPE html>
@@ -80,11 +80,11 @@ Now, switch to the `Documentation` folder and add a new file called `section0.ht
 </html>
 ```
 
-This HTML code is fairly simple.  `section0.html` gives a simple description of the role and use of constants and variables in Swift.
+Thus, `section0.html` gives a simple description of the role and use of constants and variables in Swift.
 
 ####Formatting Documentation with CSS
 
-`section0.html` links to a CSS file called `styl.css`.  This CSS file works just the same way thaty you would imagine: it defines the styling of the HTML pages in your `Documentation` directory.  Go ahead and create a new file called `style.css` and add it to your `Documentation` directory.  Open this file and add the code below.
+`section0.html` links to a CSS file called `styl.css`.  This CSS file works just the same way that you would imagine: it defines the styling of the HTML pages in your `Documentation` directory.  Go ahead and create a new file called `style.css` and add it to your `Documentation` directory.  Open this file and add the code below.
 
 ```
 body {
@@ -103,11 +103,11 @@ p {
 }
 ```
 
-This CSS file does not really do anything fancy.  It is just a simple description of your HTML page's style in terms of margins, colors, fonts, and text alignment.  If you prefer more or less styling, then have it.
+This CSS file is a very basic description of your HTML page's style in terms of margins, colors, fonts, and text alignment.  If you prefer more or less styling, then change it to match your taste.
 
 ####Mapping the Content
 
-The last step entails teaching the `Playground` how to organize its content.  You will use the `contents.xcplayground` file to complete this task.  Open this file in a text editor and have it match the code below.
+The last step entails teaching the `Playground` how to organize its content.  You will use the `contents.xcplayground` file to complete this task.  Open this file in a text editor and update it to match the listing below.
 
 ```
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -128,8 +128,10 @@ Make sure that you have saved all of your CSS and HTML files and that they are i
 
 ##Conclusion
 
-`Playgrounds` are among the most exciting new tools for the Mac and iOS developer.  They are a great resource for rapidly testing and developing solutions to a problem.  This idea is obvious at first glance.  
+`Playgrounds` are among the most exciting new tools for the Mac and iOS developer.  They are a great resource for rapidly testing and developing solutions to a problem.  The tight feedback loop between the Playground and the user can also serve other purposes.
 
-`Playgrounds` also offer some pedagogical benefits as well, as this post aims to show.  Done well, a `Playground` can be a presentation tool with a full Swift REPL inside of it.  It is also feasible that entire lessons can be mapped out in a single, or collection of, `Playgrounds`.  Each section of the `Playground` could describe a new concept or pattern, and then be followed by a section for writing Swift code.  The elegance of this approach lies in the fact that a `Playground` can do both things at the same time.
+For example, `Playgrounds` offer some pedagogical benefits as well.  Done well, a `Playground` can be a presentation tool with a full Swift REPL inside of it.  It is also feasible that entire lessons can be mapped out in a single, or collection of, `Playgrounds`.  Each section of the `Playground` could describe a new concept or pattern, and then be followed by a section for writing Swift code.  
 
-Finally, it is worth mentioning that there is more to explore in `Playgrounds`.  For example, I didn't cover using assets into the `Resources` folder.  `Playgrounds` even have an API that you can explore.  Type in `import XCPlayground` at the top of a `Playground` and command-click on `XCPlayground` to see what is available.
+It is worth mentioning that there is more to explore in `Playgrounds`.  For example, I didn't cover using the `Resources` folder.  You can use this folder to expose a variety of assets to your `Playground`, as demonstrated in the `Balloons.playground`.  I leave it as an exercise for the reader to experiment with this feature.
+
+`Playgrounds` even have an API that you can explore.  Type in `import XCPlayground` at the top of a `Playground` and command-click on `XCPlayground` to see what is available.  Functions like `XCPSetExecutionShouldContinueIndefinitely(_:)` and `XCPShowView(_:, view:)` look particularly interesting.  Check back here soon for another post exploring this API.
