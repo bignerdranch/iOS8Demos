@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A9B7EA95-1A66-4CC4-A25D-B1DAE96DA2D0</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Expecterator</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B5FB0A962A6E2E415C1FE646113AE60DFB5E9C38</key>
+		<string>https://github.com/bignerdranch/iOS8Demos.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>AsyncTesting/Expecterator/Expecterator.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B5FB0A962A6E2E415C1FE646113AE60DFB5E9C38</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/bignerdranch/iOS8Demos.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B5FB0A962A6E2E415C1FE646113AE60DFB5E9C38</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B5FB0A962A6E2E415C1FE646113AE60DFB5E9C38</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOS8Demos</string>
+		</dict>
+	</array>
+</dict>
+</plist>
