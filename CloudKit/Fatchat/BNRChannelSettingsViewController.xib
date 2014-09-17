@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="6206.8" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BNRChannelSettingsViewController">
+            <connections>
+                <outlet property="channelNameLabel" destination="fNM-N1-w4E" id="uaN-gc-MrB"/>
+                <outlet property="userHandleLabel" destination="FDU-8r-FWH" id="opN-ne-h1T"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Handle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYT-U1-MBC">
+                    <rect key="frame" x="8" y="80" width="95" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Fxe-Cb-opm"/>
+                        <constraint firstAttribute="width" constant="95" id="WHG-UV-OIC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FDU-8r-FWH">
+                    <rect key="frame" x="150" y="76" width="162" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="162" id="EDU-k2-uNL"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="162" id="cgf-AY-y1F"/>
+                        <constraint firstAttribute="height" constant="30" id="dHK-SB-yO9"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="oJf-i6-0e8"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Channel Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjw-iL-G9L">
+                    <rect key="frame" x="8" y="118" width="114" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="A1q-D2-hRJ"/>
+                        <constraint firstAttribute="width" constant="114" id="aad-pz-Uh2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fNM-N1-w4E">
+                    <rect key="frame" x="150" y="114" width="162" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="162" id="Enf-9L-Ce4"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="162" id="Nyr-Ip-mwe"/>
+                        <constraint firstAttribute="height" constant="30" id="anU-6C-ZTw"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="w4h-TY-RWV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFX-jY-yeV">
+                    <rect key="frame" x="8" y="176" width="304" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.80867622030246333" blue="0.83684896884491811" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="304" id="34q-t6-WFl"/>
+                        <constraint firstAttribute="height" constant="30" id="lhI-Ml-x1g"/>
+                    </constraints>
+                    <state key="normal" title="Delete All Messages">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="deleteAllMessagesTapped:" destination="-1" eventType="touchUpInside" id="V5c-N7-WVv"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="fNM-N1-w4E" firstAttribute="top" secondItem="FDU-8r-FWH" secondAttribute="bottom" constant="8" id="3Sy-CU-SeG"/>
+                <constraint firstItem="hjw-iL-G9L" firstAttribute="top" secondItem="XYT-U1-MBC" secondAttribute="bottom" constant="17" id="5fR-GP-aLc"/>
+                <constraint firstItem="MFX-jY-yeV" firstAttribute="top" secondItem="fNM-N1-w4E" secondAttribute="bottom" constant="32" id="6w7-Zp-gII"/>
+                <constraint firstAttribute="trailing" secondItem="FDU-8r-FWH" secondAttribute="trailing" constant="8" id="DN4-ws-Tov"/>
+                <constraint firstAttribute="trailing" secondItem="MFX-jY-yeV" secondAttribute="trailing" constant="8" id="GyO-JE-n0v"/>
+                <constraint firstAttribute="trailing" secondItem="fNM-N1-w4E" secondAttribute="trailing" constant="8" id="H0w-Rt-P48"/>
+                <constraint firstItem="XYT-U1-MBC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="KQK-mv-pCW"/>
+                <constraint firstItem="XYT-U1-MBC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Okq-CY-85o"/>
+                <constraint firstItem="MFX-jY-yeV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="UGL-aS-JpB"/>
+                <constraint firstItem="hjw-iL-G9L" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="rxB-dB-JRf"/>
+                <constraint firstItem="FDU-8r-FWH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="76" id="ziM-qI-BYl"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4">
+                <size key="portraitSize" width="320" height="568"/>
+                <size key="landscapeSize" width="568" height="320"/>
+            </simulatedScreenMetrics>
+            <point key="canvasLocation" x="964" y="629"/>
+        </view>
+    </objects>
+</document>
