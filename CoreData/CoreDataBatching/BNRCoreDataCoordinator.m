@@ -98,10 +98,10 @@ static NSUInteger const BNRCoreDataBatchingInitialSize = 250000;
 
 #pragma mark - Fetching
 
-- (void)numberOfAllEntitiesAcknowledged:(BOOL)acknowleged withCompletion:(void (^)(NSUInteger))completion {
+- (void)numberOfAllEntitiesAcknowledged:(BOOL)acknowledged withCompletion:(void (^)(NSUInteger))completion {
     __weak typeof (self) weakSelf = self;
     [_managedObjectContext performBlock:^{
-        NSUInteger count = [weakSelf numberOfAllEntitiesAcknowledged:acknowleged];
+        NSUInteger count = [weakSelf numberOfAllEntitiesAcknowledged:acknowledged];
         dispatch_async(dispatch_get_main_queue(), ^{
             completion(count);
         });

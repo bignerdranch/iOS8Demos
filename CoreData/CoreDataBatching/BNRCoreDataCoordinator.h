@@ -19,7 +19,7 @@
 - (void)insertInitialDataSetWithCompletion:(void (^)(BOOL success))completion;
 
 #pragma mark - Count Fetching
-- (void)numberOfAllEntitiesAcknowledged:(BOOL)acknowleged
+- (void)numberOfAllEntitiesAcknowledged:(BOOL)acknowledged
                          withCompletion:(void (^)(NSUInteger count))completion;
 
 #pragma mark - Updating

@@ -185,7 +185,7 @@ static void *ProgressObserverContext = &ProgressObserverContext;
 - (void)refreshFetchProgressLabel {
     self.acknowledgedCountLabel.text = [NSString stringWithFormat:@"Fetched: %@ %@",
                                         self.lastFetchProgressCountValue,
-                                        (self.fetchAcknowledgedSwitch.on) ? @"acknowledged" : @"unacknowleged"];
+                                        (self.fetchAcknowledgedSwitch.on) ? @"acknowledged" : @"unacknowledged"];
 }
 
 #pragma mark - Accessor
