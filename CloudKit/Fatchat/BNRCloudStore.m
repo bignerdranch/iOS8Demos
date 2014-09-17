@@ -14,7 +14,7 @@
 
 #import <CloudKit/CloudKit.h>
 
-#define LOG_ERROR(__STR__)         if(error) { NSLog(@"Error: %@, op = %@", error.localizedDescription, __STR__); }
+#define LOG_ERROR(__STR__)         if(error) { NSLog(@"Error: %@, op = %@", error, __STR__); }
 
 #define ONE_SHOT_QUERIES
 
@@ -261,7 +261,7 @@ NSString * const SubscriptionType = @"subscription";
 
 }
 
-- (BNRChatChannel*)channelWithName:(NSString*)name {
+- (BNRChatChannel *)channelWithName:(NSString*)name {
     __block BNRChatChannel *ret = nil;
     [self.channels indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop){
         BNRChatChannel *channel = obj;
@@ -289,7 +289,7 @@ NSString * const SubscriptionType = @"subscription";
  */
 
 
-- (CKNotificationInfo *)notificationInfoForChannel:(BNRChatChannel*)channel {
+- (CKNotificationInfo *)notificationInfoForChannel:(BNRChatChannel *)channel {
     CKNotificationInfo *note = [[CKNotificationInfo alloc] init];
     note.alertLocalizationKey = @"%@: %@ (in %@)";
     note.alertLocalizationArgs = @[
@@ -326,7 +326,7 @@ NSString * const SubscriptionType = @"subscription";
     }];
 }
 
-- (void)recordSubscription:(CKSubscription *)subscription toChannel:(BNRChatChannel*)channel {
+- (void)recordSubscription:(CKSubscription *)subscription toChannel:(BNRChatChannel *)channel {
     CKRecord *record = [[CKRecord alloc] initWithRecordType:SubscriptionType];
     [record setObject:channel.name forKey:ChannelNameKey];
     [record setObject:self.myIdentifier forKey:MyIdentifierKey];
@@ -383,7 +383,7 @@ NSString * const SubscriptionType = @"subscription";
 #endif
 }
 
-- (BNRChannelSubscription*)subscriptionForChannel:(BNRChatChannel*)channel {
+- (BNRChannelSubscription*)subscriptionForChannel:(BNRChatChannel *)channel {
     BNRChannelSubscription *ret = nil;
     for(BNRChannelSubscription *sub in self.subscriptions) {
         BOOL isSame = [sub.channel.name isEqual:channel.name];
@@ -395,7 +395,7 @@ NSString * const SubscriptionType = @"subscription";
     return ret;
 }
 
-- (void)unsubscribeFromChannel:(BNRChatChannel*)channel completion:(void (^)(BNRChatChannel *, NSError *))completion {
+- (void)unsubscribeFromChannel:(BNRChatChannel *)channel completion:(void (^)(BNRChatChannel *, NSError *))completion {
     if(!channel.subscribed) {
         if(completion) {
             completion(channel,nil);
@@ -440,7 +440,7 @@ NSString * const SubscriptionType = @"subscription";
 
 #pragma mark - Messages
 
-- (BNRChatMessage*)messageWithRecord:(CKRecord*)record {
+- (BNRChatMessage *)messageWithRecord:(CKRecord*)record {
     BNRChatMessage *newMessage = [[BNRChatMessage alloc] init];
     newMessage.message = [record objectForKey:MessageTextKey];
     newMessage.createdDate = record.creationDate;
@@ -458,7 +458,7 @@ NSString * const SubscriptionType = @"subscription";
 
 - (void)createNewMessageWithText:(NSString *)text assetFileUrl:(NSURL *)assetFileUrl
                        assetType:(BNRChatMessageAssetType)assetType
-                         channel:(BNRChatChannel*)channel
+                         channel:(BNRChatChannel *)channel
                       completion:(void (^)(BNRChatMessage *, NSError *))completion {
     NSParameterAssert(channel);
     NSParameterAssert(text);
@@ -521,7 +521,7 @@ NSString * const SubscriptionType = @"subscription";
 
     queryOp.queryCompletionBlock = ^(CKQueryCursor *cursor, NSError *error) {
         LOG_ERROR(@"fetching messages");
-        NSArray *sortedArray = [arr sortedArrayUsingComparator:^NSComparisonResult(BNRChatMessage*msg1, BNRChatMessage *msg2){
+        NSArray *sortedArray = [arr sortedArrayUsingComparator:^NSComparisonResult(BNRChatMessage *msg1, BNRChatMessage *msg2){
             return [msg1.createdDate compare:msg2.createdDate];
         }];
         completion(sortedArray, error);

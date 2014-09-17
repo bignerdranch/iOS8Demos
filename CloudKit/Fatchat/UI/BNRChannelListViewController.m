@@ -56,13 +56,13 @@ NSString * const CellIdentifier = @"CellIdentifier";
 }
 
 
-- (void) promptForNewChannel {
+- (void)promptForNewChannel {
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"New Channel" message:@"Please name your new channel." delegate:self cancelButtonTitle:@"Nevermind" otherButtonTitles:@"Create", nil];
     alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
     [alertView show];
 }
 
-- (void) promptForNewHandle {
+- (void)promptForNewHandle {
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"New Handle" message:@"Who will you be?" delegate:self cancelButtonTitle:@"Nevermind" otherButtonTitles:@"Rename Me", nil];
     alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
     [alertView show];

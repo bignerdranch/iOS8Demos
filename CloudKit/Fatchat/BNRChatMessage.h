@@ -30,6 +30,4 @@ typedef NS_ENUM(NSUInteger, BNRChatMessageAssetType) {
 
 @property (nonatomic) CKRecordID *recordID;
 
-- (void)loadAsset:(NSURL*)url ;
-
 @end

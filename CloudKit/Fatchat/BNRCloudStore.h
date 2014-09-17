@@ -16,20 +16,20 @@
 @protocol BNRCloudStoreChannelDelegate <NSObject>
 @optional
 
-- (BOOL) cloudStore:(BNRCloudStore*)store shouldCreateChannel:(BNRChatChannel*)channel;
-- (void) cloudStore:(BNRCloudStore*)store didCreateChannel:(BNRChatChannel*)channel;
+- (BOOL)cloudStore:(BNRCloudStore *)store shouldCreateChannel:(BNRChatChannel *)channel;
+- (void)cloudStore:(BNRCloudStore *)store didCreateChannel:(BNRChatChannel *)channel;
 
-- (BOOL) cloudStore:(BNRCloudStore*)store shouldSendMessage:(BNRChatMessage*)messge onChannel:(BNRChatChannel*)channel;
-- (void) cloudStore:(BNRCloudStore*)store didSendMessage:(BNRChatMessage*)message onChannel:(BNRChatChannel*)channel;
+- (BOOL)cloudStore:(BNRCloudStore *)store shouldSendMessage:(BNRChatMessage *)message onChannel:(BNRChatChannel *)channel;
+- (void)cloudStore:(BNRCloudStore *)store didSendMessage:(BNRChatMessage *)message onChannel:(BNRChatChannel *)channel;
 
 @end
 
 @protocol BNRCloudStoreMessageDelegate <NSObject>
 @optional
 
-- (BOOL) cloudStore:(BNRCloudStore*)store shouldSendMessage:(BNRChatMessage*)messge onChannel:(BNRChatChannel*)channel;
-- (void) cloudStore:(BNRCloudStore*)store didSendMessage:(BNRChatMessage*)message onChannel:(BNRChatChannel*)channel;
-- (void) cloudStore:(BNRCloudStore *)store didReceiveMessage:(BNRChatMessage *)message onChannel:(BNRChatChannel *)channel;
+- (BOOL)cloudStore:(BNRCloudStore *)store shouldSendMessage:(BNRChatMessage *)messge onChannel:(BNRChatChannel *)channel;
+- (void)cloudStore:(BNRCloudStore *)store didSendMessage:(BNRChatMessage *)message onChannel:(BNRChatChannel *)channel;
+- (void)cloudStore:(BNRCloudStore *)store didReceiveMessage:(BNRChatMessage *)message onChannel:(BNRChatChannel *)channel;
 
 @end
 
@@ -48,15 +48,15 @@
 - (void)createNewChannel:(NSString*)channelName completion:(void(^)(BNRChatChannel *newChannel, NSError *error))completion;
 
 
-- (void)fetchMessagesForChannel:(BNRChatChannel*)channel completion:(void(^)(NSArray *channels, NSError *error))completion;
+- (void)fetchMessagesForChannel:(BNRChatChannel *)channel completion:(void(^)(NSArray *channels, NSError *error))completion;
 - (void)createNewMessageWithText:(NSString*)text
                     assetFileUrl:(NSString*)assetFileUrl
                        assetType:(BNRChatMessageAssetType)assetType
-                         channel:(BNRChatChannel*)channel
+                         channel:(BNRChatChannel *)channel
                       completion:(void(^)(BNRChatMessage *newChannel, NSError *error))completion;
 
 - (void)subscribeToChannel:(BNRChatChannel *)channel completion:(void(^)(BNRChatChannel *channel, NSError *error))completion;
-- (void)unsubscribeFromChannel:(BNRChatChannel*)channel completion:(void(^)(BNRChatChannel *channel, NSError *error))completion;
+- (void)unsubscribeFromChannel:(BNRChatChannel *)channel completion:(void(^)(BNRChatChannel *channel, NSError *error))completion;
 ;
 
 

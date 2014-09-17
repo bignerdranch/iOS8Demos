@@ -158,7 +158,7 @@
     }
 }
 
-- (void) promptForNewHandle {
+- (void)promptForNewHandle {
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"New Handle" message:@"Who will you be?" delegate:self cancelButtonTitle:@"Nevermind" otherButtonTitles:@"Rename Me", nil];
     alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
     [alertView show];

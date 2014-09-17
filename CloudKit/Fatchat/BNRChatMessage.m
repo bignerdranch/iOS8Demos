@@ -10,8 +10,4 @@
 
 @implementation BNRChatMessage
 
-- (void)loadAsset:(NSURL *)url {
-    // TODO: deal with it
-}
-
 @end
