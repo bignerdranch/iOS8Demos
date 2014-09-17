@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6206.8" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
+        <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="ChatMessageCell" rowHeight="120" id="bq1-ub-Y90" customClass="BNRChatMessageCell">
+            <rect key="frame" x="0.0" y="0.0" width="472" height="120"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bq1-ub-Y90" id="q7B-OF-RTt">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Handle sez..." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ni2-hl-dkH">
+                        <rect key="frame" x="8" y="92" width="456" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="NoN-dp-IA8"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="11"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There's some text in here but we don't know what it'll say." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEh-RV-1J1">
+                        <rect key="frame" x="8" y="8" width="456" height="76"/>
+                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="76" id="GEx-xr-UY3"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="sEh-RV-1J1" firstAttribute="leading" secondItem="q7B-OF-RTt" secondAttribute="leadingMargin" id="3zb-t8-HfT"/>
+                    <constraint firstItem="sEh-RV-1J1" firstAttribute="top" secondItem="q7B-OF-RTt" secondAttribute="topMargin" id="5Vu-B7-z8j"/>
+                    <constraint firstItem="ni2-hl-dkH" firstAttribute="leading" secondItem="q7B-OF-RTt" secondAttribute="leadingMargin" id="jVD-6u-da4"/>
+                    <constraint firstItem="sEh-RV-1J1" firstAttribute="trailing" secondItem="q7B-OF-RTt" secondAttribute="trailingMargin" id="jYM-JR-BXW"/>
+                    <constraint firstItem="ni2-hl-dkH" firstAttribute="top" secondItem="sEh-RV-1J1" secondAttribute="bottom" constant="8" id="nq6-R1-eCX"/>
+                    <constraint firstItem="ni2-hl-dkH" firstAttribute="trailing" secondItem="q7B-OF-RTt" secondAttribute="trailingMargin" id="oSD-N5-PVp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="handleLabel" destination="ni2-hl-dkH" id="icn-qM-Otm"/>
+                <outlet property="messageTextLabel" destination="sEh-RV-1J1" id="Sfr-Yc-gcx"/>
+            </connections>
+            <point key="canvasLocation" x="265" y="232"/>
+        </tableViewCell>
+    </objects>
+</document>
