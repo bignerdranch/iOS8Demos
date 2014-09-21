@@ -11,7 +11,7 @@
 #import "Entity.h"
 #import "BNRTimeBlock.h"
 
-static NSUInteger const BNRCoreDataBatchingInitialSize = 250000;
+static NSUInteger const BNRCoreDataBatchingInitialSize = 100000;
 
 @interface BNRCoreDataCoordinator()
 
@@ -115,6 +115,12 @@ static NSUInteger const BNRCoreDataBatchingInitialSize = 250000;
     return objects;
 }
 
+- (NSArray *)allEntities {
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:NSStringFromClass(Entity.class)];
+    fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"title" ascending:YES selector:@selector(localizedStandardCompare:)]];
+    return [_managedObjectContext executeFetchRequest:fetchRequest error:nil];
+}
+
 - (NSUInteger)numberOfAllEntitiesAcknowledged:(BOOL)acknowledged {
     NSError *fetchError = nil;
     NSFetchRequest *fetch = [self fetchRequestForItemsAcknowledged:acknowledged];
@@ -162,6 +168,14 @@ static NSUInteger const BNRCoreDataBatchingInitialSize = 250000;
             newEntity.title = [NSString stringWithFormat:@"%ld: Entity", (long)index + 1];
             newEntity.acknowledged = @(NO);
             NSLog(@"Inserted %ld of %ld", (long)index + 1, (long)BNRCoreDataBatchingInitialSize);
+        }
+        if (count > BNRCoreDataBatchingInitialSize) {
+            NSMutableArray *extraEntites = [[self allEntities] mutableCopy];
+            [extraEntites removeObjectsInRange:NSMakeRange(0, BNRCoreDataBatchingInitialSize)];
+            [extraEntites enumerateObjectsUsingBlock:^(NSManagedObject *obj, NSUInteger idx, BOOL *stop) {
+                [_managedObjectContext deleteObject:obj];
+                NSLog(@"Delete Extra Entity: %ld", (long)idx + 1);
+            }];
         }
         BOOL success = [strongSelf saveContext];
         dispatch_async(dispatch_get_main_queue(), ^{
