@@ -23,6 +23,7 @@
 		0E3CA3E219A78AD000A6AA21 /* BNRChannelSubscription.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E3CA3E119A78AD000A6AA21 /* BNRChannelSubscription.m */; };
 		0E3CA3E519A7B15300A6AA21 /* BNRChannelListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E3CA3E419A7B15300A6AA21 /* BNRChannelListViewController.m */; };
 		0E3CA3E819A7B38700A6AA21 /* BNRChannelChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E3CA3E719A7B38700A6AA21 /* BNRChannelChatViewController.m */; };
+		0E6662211C11960800F14E8C /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E6662201C11960800F14E8C /* Launch.storyboard */; };
 		0EC0BAB219AB351300CDCC15 /* BNRChatMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC0BAB119AB351300CDCC15 /* BNRChatMessageCell.m */; };
 		0EC0BAB419AB354200CDCC15 /* BNRChatMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EC0BAB319AB354200CDCC15 /* BNRChatMessageCell.xib */; };
 		0EC0BAB719AB368800CDCC15 /* UITableViewCell+BNRAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC0BAB619AB368800CDCC15 /* UITableViewCell+BNRAdditions.m */; };
@@ -69,6 +70,7 @@
 		0E3CA3E419A7B15300A6AA21 /* BNRChannelListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNRChannelListViewController.m; path = UI/BNRChannelListViewController.m; sourceTree = "<group>"; };
 		0E3CA3E619A7B38700A6AA21 /* BNRChannelChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNRChannelChatViewController.h; path = UI/BNRChannelChatViewController.h; sourceTree = "<group>"; };
 		0E3CA3E719A7B38700A6AA21 /* BNRChannelChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNRChannelChatViewController.m; path = UI/BNRChannelChatViewController.m; sourceTree = "<group>"; };
+		0E6662201C11960800F14E8C /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		0EC0BAB019AB351300CDCC15 /* BNRChatMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRChatMessageCell.h; sourceTree = "<group>"; };
 		0EC0BAB119AB351300CDCC15 /* BNRChatMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRChatMessageCell.m; sourceTree = "<group>"; };
 		0EC0BAB319AB354200CDCC15 /* BNRChatMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BNRChatMessageCell.xib; path = UI/BNRChatMessageCell.xib; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				0E3CA3B219A7696000A6AA21 /* Main.storyboard */,
 				0E3CA3B519A7696100A6AA21 /* Images.xcassets */,
 				0E3CA3A819A7696000A6AA21 /* Supporting Files */,
+				0E6662201C11960800F14E8C /* Launch.storyboard */,
 			);
 			path = Fatchat;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				0E029C3619BDCAE900B4AD78 /* BNRAutoFlexibleTextCell.xib in Resources */,
 				0E3CA3B619A7696100A6AA21 /* Images.xcassets in Resources */,
 				0EC0BAB419AB354200CDCC15 /* BNRChatMessageCell.xib in Resources */,
+				0E6662211C11960800F14E8C /* Launch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
