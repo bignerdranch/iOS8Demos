@@ -60,7 +60,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [BNRCloudStore sharedStore].messageDelegate = self;
-    self.messageTextField.frame = CGRectMake(0, 0, 200, 30);
+    self.messageTextField.frame = CGRectMake(0, 0, self.view.frame.size.width-120, 30);
     self.messageTextField.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     self.messageTextField.autocapitalizationType = UITextAutocapitalizationTypeNone;
     self.messageTextField.autocorrectionType = UITextAutocorrectionTypeNo;
