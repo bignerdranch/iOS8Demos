@@ -214,6 +214,15 @@
     }
 }
 
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForFooterInSection:(NSInteger)section {
+    return 2;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    UIView *v = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 1)];
+    v.backgroundColor = [UIColor lightGrayColor];
+    return v;
+}
 
 #pragma mark - UITextFieldDelegate
 
